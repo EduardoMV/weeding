@@ -1,18 +1,34 @@
 [
   {
     "nombre": "Eduardo Martínez",
-    "codigo": "6338bed1"
+    "codigo": "d0f5372f"
   },
   {
     "nombre": "Laura Gómez",
-    "codigo": "457b1dc5"
+    "codigo": "322a45a8"
   },
   {
     "nombre": "Carlos Vela",
-    "codigo": "5708ed61"
+    "codigo": "6471c1ca"
   },
   {
     "nombre": "Ana Torres",
-    "codigo": "bc8ff1d6"
+    "codigo": "d96e5d6c"
+  },
+  {
+    "nombre": "Lorena Jimenez",
+    "codigo": "6e8cd53d"
+  },
+  {
+    "nombre": "Noemi Vaca",
+    "codigo": "93478ba7"
+  },
+  {
+    "nombre": "David Roberto",
+    "codigo": "80f922f3"
+  },
+  {
+    "nombre": "Fernanda Mena",
+    "codigo": "e01566c9"
   }
 ]
