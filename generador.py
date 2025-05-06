@@ -5,7 +5,7 @@ import hashlib
 import qrcode
 from datetime import datetime
 
-def generar_invitados(excel_path="invitados.xlsx", output_json="invitados_generados.json", qr_dir="qr_codes", base_url="http://localhost:5000"):
+def generar_invitados(excel_path="invitados.xlsx", output_json="invitados_generados.json", qr_dir="qr_codes", base_url="https://juliaandcarlos.onrender.com"):
     os.makedirs(qr_dir, exist_ok=True)
     df = pd.read_excel(excel_path)
     invitados = []

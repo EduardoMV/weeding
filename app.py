@@ -5,7 +5,7 @@ import json, os
 app = Flask(__name__)
 
 if not os.path.exists("invitados_generados.json"):
-    generar_invitados(base_url="https://tuboda-eduardo.replit.app")
+    generar_invitados(base_url="https://juliaandcarlos.onrender.com")
 
 with open("invitados_generados.json", "r", encoding="utf-8") as f:
     invitados = json.load(f)
