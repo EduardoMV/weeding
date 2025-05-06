@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="estrellas"></div>
+    <div class="container">
+        <div class="tarjeta">
+            <div class="cinta"></div>
+            <div class="esquina esquina-tl"></div>
+            <div class="esquina esquina-tr"></div>
+            <div class="esquina esquina-bl"></div>
+            <div class="esquina esquina-br"></div>
+            
+            <div class="encabezado">
+                <div class="fecha-elegante">12 · 12 · 2025</div>
+            </div>
+            
+            <div class="saludo">
+                <span class="nombre-invitado">Hola {{ nombre }}!</span>
+            </div>
+            
+            <div class="separador">
+                <div class="linea"></div>
+                <div class="icono"><i class="fas fa-heart"></i></div>
+                <div class="linea"></div>
+            </div>
+            
+            <div class="contenido-principal">
+                <div class="nombres">Julia & Carlos</div>
+                <div class="titulo">Nos casamos</div>
+                
+                <div class="mensaje">
+                    <p>Con inmenso amor y alegría en nuestros corazones,</p>
+                    <p>tenemos el placer de invitarte a celebrar nuestra unión.</p>
+                    <p>Tu presencia hará de este día algo aún más especial.</p>
+                </div>
+                
+                <div class="anillos-svg">
+                    <svg viewBox="0 0 100 40">
+                        <circle cx="35" cy="20" r="10" fill="none" stroke="#d4a76a" stroke-width="1.5"/>
+                        <circle cx="65" cy="20" r="10" fill="none" stroke="#d4a76a" stroke-width="1.5"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="detalles">
+                <div class="detalles-item">
+                    <span class="detalles-icono"><i class="far fa-calendar-alt"></i></span>
+                    <div class="detalles-contenido">
+                        <span class="detalles-titulo">Fecha</span>
+                        <span class="detalles-valor">12 de diciembre de 2025</span>
+                    </div>
+                </div>
+                
+                <div class="detalles-item">
+                    <span class="detalles-icono"><i class="far fa-clock"></i></span>
+                    <div class="detalles-contenido">
+                        <span class="detalles-titulo">Hora</span>
+                        <span class="detalles-valor">5:00 PM</span>
+                    </div>
+                </div>
+                
+                <div class="detalles-item">
+                    <span class="detalles-icono"><i class="fas fa-map-marker-alt"></i></span>
+                    <div class="detalles-contenido">
+                        <span class="detalles-titulo">Lugar</span>
+                        <span class="detalles-valor">Jardines del Lago, CDMX</span>
+                    </div>
+                </div>
+                
+                <div class="nota-adicional">
+                    <i class="fas fa-glass-cheers"></i>
+                    <p>Código de vestimenta: Formal elegante</p>
+                </div>
+            </div>
+            
+            <div class="ornamento">&#10046;</div>
+            
+            <div class="firma">¡Te esperamos con mucho cariño!</div>
+            
+            <div class="codigo-qr">
+                <p>Invitación personalizada para ti</p>
+                <div class="qr-nota">Guarda esta invitación y muéstrala al ingresar</div>
+            </div>
+            
+            <div class="flores-decoracion flores-top-left"></div>
+            <div class="flores-decoracion flores-bottom-right"></div>
+        </div>
+    </div>
+</body>
+</html>

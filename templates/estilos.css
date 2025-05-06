@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #9f7e69;
+    --color-secondary: #d4a76a;
+    --color-accent: #f0ddc8;
+    --color-background: #faf3eb;
+    --color-text: #5d4037;
+    --color-text-light: #8d6e63;
+    --font-script: 'Great Vibes', cursive;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --border-radius: 20px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: linear-gradient(145deg, #f7ede2 0%, #fdf6f2 50%, #f5e8e4 100%);
+    color: var(--color-text);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Estrellas decorativas en el fondo */
+.estrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, rgba(212, 167, 106, 0.4) 50%, transparent 100%),
+        radial-gradient(1px 1px at 40px 70px, rgba(212, 167, 106, 0.3) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90px 40px, rgba(212, 167, 106, 0.4) 50%, transparent 100%),
+        radial-gradient(1px 1px at 130px 80px, rgba(212, 167, 106, 0.3) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 160px 120px, rgba(212, 167, 106, 0.4) 50%, transparent 100%);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: estrellas-movimiento 100s linear infinite;
+}
+
+@keyframes estrellas-movimiento {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft), 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    position: relative;
+    padding: 70px 50px;
+    text-align: center;
+    border: 1px solid rgba(240, 220, 200, 0.5);
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    box-shadow: var(--shadow-soft), 0 15px 35px rgba(159, 126, 105, 0.1);
+    transform: translateY(-5px) translateZ(0);
+}
+
+/* Cinta decorativa */
+.cinta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    opacity: 0.8;
+}
+
+/* Esquinas decorativas */
+.esquina {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--color-secondary);
+    opacity: 0.7;
+}
+
+.esquina-tl {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+}
+
+.esquina-tr {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 8px;
+}
+
+.esquina-bl {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+}
+
+.esquina-br {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 8px;
+}
+
+/* Encabezado */
+.encabezado {
+    margin-bottom: 30px;
+}
+
+.fecha-elegante {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+/* Saludo personalizado */
+.saludo {
+    margin-bottom: 30px;
+}
+
+.nombre-invitado {
+    font-family: var(--font-script);
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+}
+
+.nombre-invitado::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-secondary) 50%, transparent 100%);
+}
+
+/* Separadores decorativos */
+.separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.linea {
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-secondary) 100%);
+}
+
+.linea:last-child {
+    background: linear-gradient(90deg, var(--color-secondary) 0%, transparent 100%);
+}
+
+.icono {
+    margin: 0 15px;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    margin-bottom: 40px;
+}
+
+.nombres {
+    font-family: var(--font-script);
+    font-size: 3.5rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    line-height: 1.1;
+}
+
+.titulo {
+    font-family: var(--font-serif);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    font-weight: 400;
+    position: relative;
+}
+
+.titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+.mensaje {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+}
+
+/* Anillos SVG */
+.anillos-svg {
+    margin: 30px auto;
+    max-width: 150px;
+    opacity: 0.7;
+}
+
+/* Detalles del evento */
+.detalles {
+    background-color: rgba(250, 243, 235, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+    position: relative;
+    border: 1px solid rgba(240, 220, 200, 0.3);
+}
+
+.detalles::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px dashed rgba(159, 126, 105, 0.2);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.detalles-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.detalles-item:last-child {
+    margin-bottom: 15px;
+}
+
+.detalles-icono {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(212, 167, 106, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.detalles-contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalles-titulo {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--color-text-light);
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.detalles-valor {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.nota-adicional {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(159, 126, 105, 0.15);
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+.nota-adicional i {
+    margin-right: 8px;
+    color: var(--color-secondary);
+}
+
+/* Ornamentos */
+.ornamento {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin: 25px 0;
+    opacity: 0.8;
+}
+
+/* Firma */
+.firma {
+    font-family: var(--font-script);
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-top: 25px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Código QR */
+.codigo-qr {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.qr-nota {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    opacity: 0.8;
+    margin-top: 10px;
+    font-family: var(--font-sans);
+}
+
+/* Decoraciones florales */
+.flores-decoracion {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%239f7e69' d='M50,0C50,0,65,20,65,50c0,30-15,50-15,50s-15-20-15-50C35,20,50,0,50,0z'/%3E%3Cpath fill='%239f7e69' d='M0,50C0,50,20,35,50,35c30,0,50,15,50,15s-20,15-50,15C20,65,0,50,0,50z'/%3E%3Cpath fill='%239f7e69' d='M25,25C25,25,35,35,50,50c15,15,25,25,25,25s-10,10-25-5C35,55,25,25,25,25z'/%3E%3Cpath fill='%239f7e69' d='M75,25C75,25,65,35,50,50c-15,15-25,25-25,25s10,10,25-5C65,55,75,25,75,25z'/%3E%3C/svg%3E");
+}
+
+.flores-top-left {
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.flores-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(135deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tarjeta {
+        padding: 60px 30px;
+    }
+    
+    .nombres {
+        font-size: 3rem;
+    }
+    
+    .detalles {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tarjeta {
+        padding: 50px 25px;
+    }
+    
+    .nombres {
+        font-size: 2.5rem;
+    }
+    
+    .titulo {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+    }
+    
+    .firma {
+        font-size: 1.8rem;
+    }
+    
+    .esquina {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nombre-invitado {
+        font-size: 2rem;
+    }
+    
+    .mensaje {
+        font-size: 1rem;
+    }
+    
+    .detalles-icono {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
