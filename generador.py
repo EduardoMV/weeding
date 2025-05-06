@@ -25,3 +25,7 @@ def generar_invitados(excel_path="invitados.xlsx", output_json="invitados_genera
         json.dump(invitados, f, indent=2, ensure_ascii=False)
 
     return invitados
+
+if __name__ == "__main__":
+    invitados = generar_invitados()
+    print(f"Se generaron {len(invitados)} códigos QR en la carpeta 'qr_codes'")
